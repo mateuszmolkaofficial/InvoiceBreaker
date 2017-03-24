@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Breaker</title>
+    <!--    FAV ICON-->
+    <link rel=icon href="icons/favicon-dollar.ico">
+    
+    <!--     BOOTSTRAP-->
+     <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <!--    GOOGLE FONTS-->
+<!-- UWAGA UZUPELNIĆ JAK BĘDZIESZ STYLOWAC !!!!!!-->
+    <!--    MAIN STYLES-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--    FONT AWSOME-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--    RESPONSIVE-->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<!-- ------------------------------------------------------------- -->
+<body>
+    <!--    NAVBAR START-->
+    <nav id="main-nav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Invoice Breaker</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/mateuszmolkaofficial/InvoiceBreaker">View code on GitHub.com!</a></li>
+            <li><a href="#contact">Contact me</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!--    NAVBAR END-->
+<!-- ------------------------------------------------------------------ -->
+    <!--    HEADER START-->
+    <div class="container-fluid" id="header">
+       <div id="header-title">
+          <h1>Create free invoice</h1>
+       </div>
+    </div>
+    <!--    HEADER END-->
+<!-- ------------------------------------------------------------------ -->
+    <!--INVOICE START-->
+    <div class="" id="invoice">
+        <div id="invoice-inner">
+            <h2 id="invoice-title" class="col-xs-12">Invoice</h2>
+            <div class="row right">
+               <label for="invoice-number">Invoice number:</label>
+                <input id="invoice-number" type="text" placeholder="Invoice number"><br>
+                <label for="invoice-date">Current date:</label>
+                <input id="invoice-date" type="text" placeholder="Invoice date">
+            </div>
+            <hr>
+            <h3>Seller data</h3>
+           <div class="row">
+            <div id="seller-data-1" class="col-sm-6 col-xs-12">
+                <input type="text" value="John Kowalski" placeholder="Seller fullname">
+                <input type="text" value="MEGASYSTEMS INC" placeholder="Seller company name">
+                <input type="text" value="799 E DRAGRAM SUITE 5A" placeholder="Seller address 1">
+                <input type="text" value="TUCSON AZ 85705" placeholder="Seller address 2">
+                <input type="text" value="USA" placeholder="Seller country">
+            </div>
+            <div id="seller-data-2" class="col-sm-6 col-xs-12 right">
+                <input type="text" value="johnkowalski@gmail.com" placeholder="Seller email">
+                <input type="text" value="+48 570696156" placeholder="Seller cell phone">
+                <input type="text" value="+48 12 4158162" placeholder="Seller home phone">
+                <input type="text" value="Central Bank" placeholder="Seller bank">
+                <input type="text" value="11 2222 3333 4444 5555 6666 7777" placeholder="Seller account">
+            </div>
+           </div>
+           <hr>
+            <div id="buyer-data">
+                <h3>Buyer data</h3>
+                <div class="row">
+                <div id="buyer-data-1" class="col-sm-6 col-xs-12">
+                    <input type="text" value="Matthew Nowak" placeholder="Buyer fullname">
+                    <input type="text" value="SUPERSYSTEMS INC" placeholder="Seller company name">
+                    <input type="text" value="998 E DRAGRAM SUITE 5A" placeholder="Seller address 1">
+                    <input type="text" value="TEXAS AZ 85705" placeholder="Seller address 2">
+                    <input type="text" value="USA" placeholder="Seller country">
+                </div>
+                <div id="buyer-data-2" class="col-sm-6 col-xs-12 right">
+                    <input type="text" value="johnkowalski@gmail.com" placeholder="Seller email">
+                    <input type="text" value="+48 570696156" placeholder="Seller cell phone">
+                    <input type="text" value="+48 12 4158162" placeholder="Seller home phone">
+                    <input type="text" value="Central Bank" placeholder="Seller bank">
+                    <input type="text" value="11 2222 3333 4444 5555 6666 7777" placeholder="Seller account">
+                </div>
+               </div>
+            </div>
+            <hr>
+            <h3>Products</h3>
+            <button id="row-more">Add row</button>
+            <button id="row-less">Remove row</button>
+            <table id="product-table" style="width:100%">
+              <tr>
+                <th style="width:10%">#</th>
+                <th style="width:40%">Description</th> 
+                <th>Quantity</th>
+                <th>Unit price($)</th>
+                <th>Total price($)</th>           
+              </tr>
+              <tr class="product">
+                <td><input type="text" value="1"></td>
+                <td><input type="text" value="Produkt 1"></td>
+                <td><input type="text" value="test"></td>
+                <td><input type="text" value="test"></td>
+                <td><input type="text" value="test"></td>
+              </tr>
+              <tfoot>
+                <tr>
+                    <th colspan="4">Para1</th>
+                    <th>123</th>
+                </tr>
+                <tr>
+                    <th colspan="4">Para2</th>
+                    <th >123</th>
+                </tr>
+                <tr>
+                    <th colspan="4">Para3</th>
+                    <th>123</th>
+                </tr>
+              </tfoot>
+            </table>
+            <div id="generate-PDF">
+                <button id="generate-PDF-button">Generate PDF TEST</button>
+            </div>
+        </div>
+    </div>
+    <!--INVOICE END-->
+<!-- ------------------------------------------------------------------ -->
+    <!--CONTACT START-->
+    <div id="contact">
+        <h2 id="contact-title">Contact</h2>
+    </div>
+    <!--CONTACT END-->
+<!-- ------------------------------------------------------------------ -->
+    <!--FOOTER START -->
+    <!--FOOTER END -->
+<!-- ------------------------------------------------------------------ -->
+   
+    
+       
+       <!--SCRIPT START    -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script> 
+        <script src="js/jsPDF/dist/jspdf.plugin.autotable.min.js"></script>
+<!--        TO TRZEBA OGARNAC!!!!!!!!!!!!   -->
+        <script src="js/bootstrap.min.js"></script>
+    <!--SCRIPT END    -->
+</body>
+</html>

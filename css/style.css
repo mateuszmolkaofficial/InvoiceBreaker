@@ -1,0 +1,123 @@
+/*GENERAL STYLES START*/
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px; 
+    background-color: #363b4d;
+/*    background-color: #388e3c;*/
+}
+input{
+    background: transparent;
+    border: none;
+     width: 80%;
+}
+input:focus{
+    border: 0;
+   
+}
+hr{
+    border-top: 1px solid #d4dadb;
+}
+/*GENERAL STYLES END*/
+/* ------------------------------------------------ */
+/*NAVBAR STYLES START*/
+.navbar{
+    margin-bottom: 0;
+    background-color: #232733;
+    border:0;
+}
+.navbar.scroll{
+    
+}
+.navbar-default .navbar-brand {
+    color: #ff6633;
+    font-weight: bold;
+}
+.navbar-default .navbar-brand:hover {
+    color: white;
+    transition: all .3s ease;
+}
+.navbar-default .navbar-nav>li>a{
+    text-align: right;
+    color: #d4dadb;
+    font-weight: 400;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: white;
+    transition: all .3s ease;
+}
+/*NAVBAR STYLES END*/
+/* ------------------------------------------------ */
+/*HEADER STYLES START*/
+
+h1{
+    margin: 0;
+    margin-top: 80px;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    
+}
+/*HEADER STYLES END*/
+/* ------------------------------------------------ */
+/*INVOICE STYLES START*/
+#invoice{
+    border: 1px solid black;
+    margin: 40px 80px;
+    background-color: #f8f8f7;
+    border-radius: 10px;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+#invoice-title{
+    text-align: center;
+    margin: 20px;
+}
+#invoice-inner{
+    width:80%;
+    margin: 0 auto;
+}
+#invoice-inner h3{
+    width:90%; 
+}
+input#invoice-number, input#invoice-date{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 20%;
+}
+#product-table{
+    border: 1px solid #d4dadb;
+    border-radius: 10px;
+    margin: 50px 0px;
+}
+#generate-PDF{
+    text-align: center;
+}
+#generate-PDF-button{
+    width: 80%;
+    height: 50px;
+    margin: 30px;
+}
+
+/*INVOICE STYLES END*/
+/* ------------------------------------------------ */
+/*CONTACT STYLES START*/
+#contact{
+    border: 1px solid black;
+    margin: 40px 80px;
+}
+#contact-title{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.right>input{
+    text-align: right;
+}
+/*CONTACT STYLES END*/
+/* ------------------------------------------------ */

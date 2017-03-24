@@ -1,0 +1,23 @@
+@media all and (max-width: 1200px){
+    
+}
+@media all and (max-width: 768px){
+
+}
+
+@media all and (max-width: 680px){
+    
+}
+@media all and (max-width: 480px){
+    
+}
+
+/*BOOTSTRAP OVERLOAD*/
+
+@media all and (min-width: 768px){
+/*    Navbar start   */
+    .navbar {
+        border-radius: 0;
+    }
+/*    Navbar end   */
+}
