@@ -45,17 +45,47 @@ $(function(){
     
 //    Adding and removing row
     $("#row-more").click(function(){
-        if($('#product-table tr.product').length<9){
-            $("#product-table").append('<tr class="product"><td><input type="text" value="test"></td><td><input type="text" value="test"></td><td><input type="text" value="test"></td><td><input type="text" value="test"></td><td><input type="text" value="test"></td></tr>');
+        if($('#product-table tr.product').length<10){
+            
+            var varToAddOne=parseInt($('#product-table tr.product:last').children()[0].children["0"].value)+1;
+            
+            $("#product-table").append('<tr class="product"><td><input type="text" value="" disabled></td><td><input type="text" value="Product"></td><td><input type="number" value="0"></td><td><input type="number" value="0"></td><td><input type="number" value="0" disabled></td></tr>');
+            $('#product-table tr.product:last').children()[0].children["0"].value=varToAddOne;
+            
+//            CALCULATING Function triggering!!
+            calculate();
+            
         }
     });
     
     $("#row-less").click(function(){
         if($('#product-table tr.product').length>1){
-            // $('#product-table tr:last').remove();
-            $('#product-table tr.product:last').remove();
+           $('#product-table tr.product:last').remove();
         }
     });
+    
+//CALCULATIONS
+function calculate(){
+    $('#product-table tr.product input').change(function(){
+        var sumOfAll=0;
+        $('#product-table tr.product').each(function(index, obj){
+            var sum=parseInt(obj.children[2].children[0].value)*parseInt(obj.children[3].children[0].value)
+            obj.children[4].children[0].value=sum;
+            sumOfAll+=sum;
+        }) 
+        var taxOfAll=sumOfAll*0.2;
+        var allOfAll=sumOfAll+taxOfAll;
+        $('#subtotal').text(sumOfAll);
+        $('#sales-tax').text(taxOfAll);
+        $('#totalsum').text(allOfAll);
+        
+    })
+}
+    
+calculate()
+
+    
+    
 //PDF TEST GENERATOR
     $('#generate-PDF').click(function(){
         var doc = new jsPDF('p', 'pt');
