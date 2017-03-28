@@ -61,6 +61,7 @@ $(function(){
     $("#row-less").click(function(){
         if($('#product-table tr.product').length>1){
            $('#product-table tr.product:last').remove();
+            calculateMinus();
         }
     });
     
@@ -81,6 +82,23 @@ function calculate(){
         
     })
 }
+function calculateMinus(){
+    
+        var sumOfAll=0;
+        $('#product-table tr.product').each(function(index, obj){
+            var sum=parseInt(obj.children[2].children[0].value)*parseInt(obj.children[3].children[0].value)
+            obj.children[4].children[0].value=sum;
+            sumOfAll+=sum;
+        }) 
+        var taxOfAll=sumOfAll*0.2;
+        var allOfAll=sumOfAll+taxOfAll;
+        $('#subtotal').text(sumOfAll);
+        $('#sales-tax').text(taxOfAll);
+        $('#totalsum').text(allOfAll);
+    
+}
+    
+
     
 calculate()
 
